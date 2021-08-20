@@ -1,0 +1,6 @@
+alias tfi="terraform init"
+alias tfp="terraform plan"
+alias tfpo="terraform plan -out tf.out"
+alias tfa="terraform apply"
+alias kx="kubectx"
+alias kns="kubens"

@@ -20,8 +20,9 @@ This document contains all the tools that I use on my daily basis. I created it 
 # Update ~/.zshrc
 plugins=(
     git
-    zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-autosuggestions
+    docker
     aws
     kubectl
 )
