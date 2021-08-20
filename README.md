@@ -2,13 +2,13 @@
 
 This document contains all the tools that I use on my daily basis. I created it to make it easier to automate anytime, and bootstrap my dev environment in a single command.
 
-## Terminal
+## Terminals
 
 ### iTerm2 (For Mac)
 
 - [Install](https://iterm2.com/)
 
-### Hyper
+### Hyper (For Windows)
 
 - [Install](https://hyper.is/)
 
@@ -33,6 +33,8 @@ plugins=(
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 - [Syntax Highlight](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [Syntax Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
+---
 
 ## Development
 
@@ -70,6 +72,8 @@ nvm install v14.17.3
 ### Golang
 
 - [Install](https://golang.org/doc/install)
+
+---
 
 ## DevOps
 
