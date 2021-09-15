@@ -15,7 +15,7 @@ This document contains all the tools that I use on my daily basis. I created it 
 ### Konsole (For Linux)
 
 - [Website](https://hyper.is/)
-- 
+
 ### Oh My ZSH
 
 - [Website](https://github.com/ohmyzsh/ohmyzsh)
