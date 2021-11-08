@@ -12,6 +12,10 @@ This document contains all the tools that I use on my daily basis. I created it 
 
 - [Install](https://hyper.is/)
 
+### Konsole (For Linux)
+
+- [Install](https://konsole.kde.org/)
+
 ### Oh My ZSH
 
 - [Install](https://github.com/ohmyzsh/ohmyzsh)
