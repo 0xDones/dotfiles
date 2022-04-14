@@ -2,26 +2,31 @@
 
 This document contains all the tools that I use on my daily basis. I created it to make it easier to automate anytime, in order to bootstrap my dev environment in a single command. I'm thinking about using Ansible for this task, but idk... Maybe one day.
 
-## Terminals and frameworks
+## Terminals
 
-### iTerm2 (For Mac)
+### MacOS
 
-- [Website](https://iterm2.com/)
+- [iterm2](https://iterm2.com/)
+- [kitty](https://github.com/kovidgoyal/kitty)
 
-### Hyper (For Windows)
+### Windows
 
-- [Website](https://konsole.kde.org/)
+- [konsole](https://konsole.kde.org/)
+- [hyper](https://hyper.is/)
 
-### Konsole (For Linux)
-
-- [Website](https://hyper.is/)
+## Terminal Frameworks
 
 ### Oh My ZSH
 
-- [Website](https://github.com/ohmyzsh/ohmyzsh)
+- [Documentation](https://github.com/ohmyzsh/ohmyzsh)
+
+#### Plugins
+
+- [Syntax Highlight](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [Syntax Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ```sh
-# Update ~/.zshrc
+# ~/.zshrc
 plugins=(
     git
     zsh-syntax-highlighting
@@ -32,11 +37,22 @@ plugins=(
 )
 ```
 
-#### Themes and Plugins
+#### Themes
 
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
-- [Syntax Highlight](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [Syntax Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
+## Terminal Tools
+
+- exa - ls alternative - <https://github.com/ogham/exa>
+- fd - find alternative - <https://github.com/sharkdp/fd>
+- dog - dig alternative - <https://github.com/ogham/dog>
+- sd - sed alternative - <https://github.com/chmln/sd>
+- lazydocker - docker terminal ui - <https://github.com/jesseduffield/lazydocker>
+- bat - improved cat - <https://github.com/sharkdp/bat>
+- mcfly - improved reverse search - <https://github.com/cantino/mcfly>
+- ripgrep - improved grep - <https://github.com/BurntSushi/ripgrep/>
+- difftastic - improved diff - <https://github.com/Wilfred/difftastic>
+- curlie - curl alternative - <https://github.com/rs/curlie>
 
 ---
 
