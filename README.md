@@ -11,8 +11,11 @@ This document contains all the tools that I use on my daily basis. I created it 
 
 ### Windows
 
-- [konsole](https://konsole.kde.org/)
 - [hyper](https://hyper.is/)
+
+### Linux
+
+- [konsole](https://konsole.kde.org/)
 
 ## Terminal Frameworks
 
