@@ -8,6 +8,7 @@ This document contains all the tools that I use on my daily basis. I created it 
 
 - [iterm2](https://iterm2.com/)
 - [kitty](https://github.com/kovidgoyal/kitty)
+- [warp](https://docs.warp.dev/)
 
 ### Windows
 
