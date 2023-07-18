@@ -44,6 +44,7 @@ plugins=(
 #### Themes
 
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
+- [Starship](https://starship.rs/)
 
 ## Terminal Tools
 
@@ -57,6 +58,8 @@ plugins=(
 - ripgrep - improved grep - <https://github.com/BurntSushi/ripgrep/>
 - difftastic - improved diff - <https://github.com/Wilfred/difftastic>
 - curlie - curl alternative - <https://github.com/rs/curlie>
+- xh - httpie alternative - <https://github.com/ducaale/xh>
+- k9s - kubernetes terminal ui - <https://k9scli.io/>
 
 ---
 
