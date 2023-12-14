@@ -1,6 +1,6 @@
 # Setup
 
-This document contains all the tools that I use on my daily basis. I created it to make it easier to automate anytime, in order to bootstrap my dev environment in a single command. I'm thinking about using Ansible for this task, but idk... Maybe one day.
+This document contains all the tools that I use on my daily basis. I created it to make it easier to automate this task, to bootstrap my dev environment in a single command. I'm thinking about using Ansible for this task, but I don't know... Maybe one day.
 
 ## Terminals
 
@@ -45,6 +45,59 @@ plugins=(
 
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 - [Starship](https://starship.rs/)
+
+##### Starship
+
+1. Install FireCode Nerd Font - <https://www.nerdfonts.com/font-downloads>
+2. Update iTerm to use it (`settings > profile > text > fonts > FireCode Nerd Font Mono`)
+3. Update VSCode
+   
+   ```json
+   "editor.fontFamily": "'FiraMono Nerd Font Mono', monospace", // "'Fira Code'",
+   "terminal.integrated.fontFamily": "'FiraMono Nerd Font Mono', monospace",
+   ```
+5. Update starship config file (`~/.config/starship.toml`)
+   
+   ```toml
+   format = """
+   $kubernetes\
+   $aws\
+   $gcloud\
+   $all\
+   $directory\
+   $git_branch\
+   $git_commit\
+   $git_state\
+   $git_metrics\
+   $git_status\
+   $character
+   """
+   add_newline = true
+   
+   [directory]
+   fish_style_pwd_dir_length = 3
+   # repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
+   repo_root_format = '[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
+   before_repo_root_style = "cyan bold"
+   repo_root_style = "green bold"
+   style = "cyan bold"
+   
+   [kubernetes]
+   format = '[k8s ⛵ $context](#2962ff bold) | '
+   disabled = false
+   detect_files = ['Chart.yaml', 'config.yaml']
+   detect_extensions = ['yaml', 'yml']
+   
+   [aws]
+   force_display = true
+   format = '[AWS $symbol($profile )(\($region\))(\[$duration\])]($style) | '
+   
+   [kubernetes.context_aliases]
+   'arn:aws:eks:us-east-1:<...>' = '<alias>'
+    
+   [gcloud]
+   format = '[GCP $symbol($project)]($style) | '
+   ```
 
 ## Terminal Tools
 
