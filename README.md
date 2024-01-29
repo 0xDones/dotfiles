@@ -113,6 +113,7 @@ plugins=(
 - curlie - curl alternative - <https://github.com/rs/curlie>
 - xh - httpie alternative - <https://github.com/ducaale/xh>
 - k9s - kubernetes terminal ui - <https://k9scli.io/>
+- fzf - command liny fuzzy finder - <https://github.com/junegunn/fzf>
 
 ---
 
