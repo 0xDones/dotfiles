@@ -106,7 +106,7 @@ Nice UI for Git
 ### Node.js
 
 - [Install NVM](https://github.com/nvm-sh/nvm)
-- [Install fnn](https://github.com/Schniz/fnm)
+- [Install fnm](https://github.com/Schniz/fnm)
 
 #### NVM
 
@@ -115,10 +115,10 @@ nvm ls-remote --lts
 nvm install v14.17.3
 ```
 
-#### FNN
+#### FNM
 
 ```sh
-fnn install --lts
+fnm install --lts
 ```
 
 ### Golang
