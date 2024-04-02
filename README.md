@@ -7,8 +7,9 @@ This document contains all the tools that I use on my daily basis. I created it 
 ### MacOS
 
 - [iterm2](https://iterm2.com/)
-- [kitty](https://github.com/kovidgoyal/kitty)
+- [alacritty](https://alacritty.org/index.html)
 - [warp](https://docs.warp.dev/)
+- [kitty](https://github.com/kovidgoyal/kitty)
 
 ### Windows
 
@@ -51,53 +52,13 @@ plugins=(
 1. Install FireCode Nerd Font - <https://www.nerdfonts.com/font-downloads>
 2. Update iTerm to use it (`settings > profile > text > fonts > FireCode Nerd Font Mono`)
 3. Update VSCode
-   
+
    ```json
    "editor.fontFamily": "'FiraMono Nerd Font Mono', monospace", // "'Fira Code'",
    "terminal.integrated.fontFamily": "'FiraMono Nerd Font Mono', monospace",
    ```
-5. Update starship config file (`~/.config/starship.toml`)
-   
-   ```toml
-   format = """
-   $kubernetes\
-   $aws\
-   $gcloud\
-   $all\
-   $directory\
-   $git_branch\
-   $git_commit\
-   $git_state\
-   $git_metrics\
-   $git_status\
-   $character
-   """
-   add_newline = true
-   
-   [directory]
-   fish_style_pwd_dir_length = 3
-   # repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
-   repo_root_format = '[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
-   before_repo_root_style = "cyan bold"
-   repo_root_style = "green bold"
-   style = "cyan bold"
-   
-   [kubernetes]
-   format = '[k8s ⛵ $context](#2962ff bold) | '
-   disabled = false
-   detect_files = ['Chart.yaml', 'config.yaml']
-   detect_extensions = ['yaml', 'yml']
-   
-   [aws]
-   force_display = true
-   format = '[AWS $symbol($profile )(\($region\))(\[$duration\])]($style) | '
-   
-   [kubernetes.context_aliases]
-   'arn:aws:eks:us-east-1:<...>' = '<alias>'
-    
-   [gcloud]
-   format = '[GCP $symbol($project)]($style) | '
-   ```
+
+4. Update starship config file (`~/.config/starship.toml`)
 
 ## Terminal Tools
 
@@ -114,6 +75,7 @@ plugins=(
 - xh - httpie alternative - <https://github.com/ducaale/xh>
 - k9s - kubernetes terminal ui - <https://k9scli.io/>
 - fzf - command liny fuzzy finder - <https://github.com/junegunn/fzf>
+- fnn - NVM alternative - <https://github.com/Schniz/fnm>
 
 ---
 
@@ -144,12 +106,19 @@ Nice UI for Git
 ### Node.js
 
 - [Install NVM](https://github.com/nvm-sh/nvm)
+- [Install fnn](https://github.com/Schniz/fnm)
 
-#### Commands
+#### NVM
 
 ```sh
 nvm ls-remote --lts
 nvm install v14.17.3
+```
+
+#### FNN
+
+```sh
+fnn install --lts
 ```
 
 ### Golang
