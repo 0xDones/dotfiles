@@ -36,6 +36,7 @@ install_brew(){
 install_zsh(){
   echo_info "Installing zsh..."
   brew install zsh
+  # TODO: Move to the end
   chsh -s $(which zsh)
   echo_success "Done!"
 }
@@ -61,7 +62,6 @@ install_brew_packages(){
   fzf \
   ripgrep \
   bat \
-  exa \
   lsd \
   fd \
   jq \
@@ -104,13 +104,16 @@ install_node(){
   echo_info "Installing Node..."
   fnm install --lts
   echo_success "Done!"
+  eval "$(fnm env --use-on-cd)"
   echo_info "Installing Yarn..."
   npm install --global yarn
   echo_success "Done!"
 }
 
 copy_configs(){
-  cp -r ./configs/. ~/
+  echo_info "Copying configs..."
+  cp -r ./home/.config/. ~/
+  echo_success "Done!"
 }
 
 append_to_zshrc(){
@@ -133,6 +136,7 @@ alias tsup='terraspace up'
 
 eval "$(starship init zsh)"
 eval "$(mcfly init zsh)"
+eval "$(fnm env --use-on-cd)"
 
 awsv() {
     aws-vault exec ${AWS_PROFILE} -- aws $@
@@ -160,13 +164,17 @@ plugins=(
 
 main() {
   echo_info "Starting setup..."
-  # install_brew
-  # install_zsh
-  # install_oh_my_zsh
-  # install_oh_my_zsh_plugins
-  # install_brew_packaged
-  # copy_configs
-  # append_to_zshrc
+  install_brew
+  install_zsh
+  install_oh_my_zsh
+  install_oh_my_zsh_plugins
+  append_to_zshrc
+  install_brew_packages
+  install_aws_cli
+  install_rust
+  install_go
+  install_node
+  copy_configs
   info
   echo_success "Setup complete!"
 }
