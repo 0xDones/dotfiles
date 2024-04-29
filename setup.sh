@@ -36,8 +36,6 @@ install_brew(){
 install_zsh(){
   echo_info "Installing zsh..."
   brew install zsh
-  # TODO: Move to the end
-  chsh -s $(which zsh)
   echo_success "Done!"
 }
 
@@ -165,6 +163,11 @@ plugins=(
 '
 }
 
+setup_shell() {
+  chsh -s $(which zsh)
+  source ~/.zshrc
+ }
+
 main() {
   echo_info "Starting setup..."
   install_brew
@@ -178,6 +181,7 @@ main() {
   install_go
   install_node
   copy_configs
+  setup_shell
   info
   echo_success "Setup complete!"
 }
