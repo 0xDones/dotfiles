@@ -1,31 +1,47 @@
-# Setup
+# Dotfiles
 
-This document contains all the tools that I use on my daily basis. I created it to make it easier to automate this task, to bootstrap my dev environment in a single command. I'm thinking about using Ansible for this task, but I don't know... Maybe one day.
+My personal dotfiles.
 
-## Terminals
+## Automated Installation
 
-### MacOS
+To install most of the things listed here
+```bash
+sh setup.sh
+```
+
+> Notes: The script will not install the following, so it needs to be installed manually.
+
+- iterm2
+- Docker
+- GitKraken
+- Golang
+
+## Manual Installation
+
+### Terminal Emulators
+
+#### MacOS
 
 - [iterm2](https://iterm2.com/)
 - [alacritty](https://alacritty.org/index.html)
 - [warp](https://docs.warp.dev/)
 - [kitty](https://github.com/kovidgoyal/kitty)
 
-### Windows
+#### Windows
 
 - [hyper](https://hyper.is/)
 
-### Linux
+#### Linux
 
 - [konsole](https://konsole.kde.org/)
 
-## Terminal Frameworks
+### Terminal Frameworks
 
-### Oh My ZSH
+#### Oh My ZSH
 
 - [Documentation](https://github.com/ohmyzsh/ohmyzsh)
 
-#### Plugins
+##### Plugins
 
 - [Syntax Highlight](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [Syntax Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
@@ -60,9 +76,8 @@ plugins=(
 
 4. Update starship config file (`~/.config/starship.toml`)
 
-## Terminal Tools
+### Utility Tools
 
-- exa - ls alternative - <https://github.com/ogham/exa>
 - fd - find alternative - <https://github.com/sharkdp/fd>
 - dog - dig alternative - <https://github.com/ogham/dog>
 - sd - sed alternative - <https://github.com/chmln/sd>
@@ -76,87 +91,38 @@ plugins=(
 - k9s - kubernetes terminal ui - <https://k9scli.io/>
 - fzf - command liny fuzzy finder - <https://github.com/junegunn/fzf>
 - fnn - NVM alternative - <https://github.com/Schniz/fnm>
+- tfenv
+- terraform-docs
 
 ---
 
-## Development
+### Developer Tools
 
-### Gitkraken
+#### Gitkraken
 
 Nice UI for Git
 
 - [Website](https://www.gitkraken.com/)
 
-### Angular
+#### Programming Languages
 
-- [Install](https://angular.io/guide/setup-local#install-the-angular-cli)
+- [Rust](https://www.rust-lang.org/tools/install)
+- [Node.js (NVM)](https://github.com/nvm-sh/nvm)
+- [Node.js (fnm)](https://github.com/Schniz/fnm)
+- [Golang](https://golang.org/doc/install)
 
-### Rust
-
-- [Install](https://www.rust-lang.org/tools/install)
-
-### Docker
+#### Docker
 
 - [Install For Linux](https://docs.docker.com/engine/install/ubuntu/)
 
-#### Docker Compose
+##### Docker Compose
 
 - [Install](https://docs.docker.com/compose/install/)
 
-### Node.js
-
-- [Install NVM](https://github.com/nvm-sh/nvm)
-- [Install fnm](https://github.com/Schniz/fnm)
-
-#### NVM
-
-```sh
-nvm ls-remote --lts
-nvm install v14.17.3
-```
-
-#### FNM
-
-```sh
-fnm install --lts
-```
-
-### Golang
-
-- [Install](https://golang.org/doc/install)
-
 ---
 
-## DevOps
+### DevOps
 
 ### AWS CLI
 
 - [Install](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
-
-### Firebase CLI
-
-- [Install](https://firebase.google.com/docs/cli#install-cli-mac-linux)
-
-### Ansible
-
-### Terraform
-
-#### Tooling
-
-- tfenv
-- terraform-docs
-
-### Vscode
-
-#### Extensions
-
-- Docker
-- Editorconfig
-- Go
-- Javascript
-- Markdownlint
-- Reload
-- Rust-analyzer
-- Material Icon Theme
-- Monokai Pro
-- runonsave
