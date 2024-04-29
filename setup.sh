@@ -119,7 +119,8 @@ copy_configs(){
 append_to_zshrc(){
   echo_info "Appending to .zshrc..."
   echo '
-alias l='lsd -la'
+alias l='lsd -l'
+alias ll='lsd -la'
 
 alias k='kubectl'
 alias kx='kubectx'
@@ -130,6 +131,7 @@ alias tfp='terraform plan'
 alias tfa='terraform apply'
 alias tfr='terraform refresh'
 alias tf='terraform'
+
 alias ts='terraspace'
 alias tsp='terraspace plan'
 alias tsup='terraspace up'
@@ -144,7 +146,8 @@ awsv() {
 
 tfv() {
     aws-vault exec ${AWS_PROFILE} -- terraform $@
-}' >>  ~/.zshrc
+}
+' >>  ~/.zshrc
   echo_success "Done!"
 }
 
