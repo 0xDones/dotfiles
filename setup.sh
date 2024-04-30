@@ -110,29 +110,29 @@ install_node(){
 
 copy_configs(){
   echo_info "Copying configs..."
-  cp -r ./home/.config/. ~/
+  cp -r ./home/. ~/
   echo_success "Done!"
 }
 
 append_to_zshrc(){
   echo_info "Appending to .zshrc..."
   echo '
-alias l='lsd -l'
-alias ll='lsd -la'
+alias l="lsd -l"
+alias ll="lsd -la"
 
-alias k='kubectl'
-alias kx='kubectx'
-alias ks='kubens'
+alias k="kubectl"
+alias kx="kubectx"
+alias ks="kubens"
 
-alias tfi='terraform init'
-alias tfp='terraform plan'
-alias tfa='terraform apply'
-alias tfr='terraform refresh'
-alias tf='terraform'
+alias tfi="terraform init"
+alias tfp="terraform plan"
+alias tfa="terraform apply"
+alias tfr="terraform refresh"
+alias tf="terraform"
 
-alias ts='terraspace'
-alias tsp='terraspace plan'
-alias tsup='terraspace up'
+alias ts="terraspace"
+alias tsp="terraspace plan"
+alias tsup="terraspace up"
 
 eval "$(starship init zsh)"
 eval "$(mcfly init zsh)"
