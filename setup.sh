@@ -110,7 +110,7 @@ install_node(){
 
 copy_configs(){
   echo_info "Copying configs..."
-  cp -r ./home/. ~/
+  cp -r ./home/ ~/
   echo_success "Done!"
 }
 
