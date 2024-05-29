@@ -27,15 +27,13 @@ format = '[k8s ⛵ $context](#2962ff bold) | '
 disabled = false
 detect_files = ['Chart.yaml', 'config.yaml']
 detect_extensions = ['yaml', 'yml']
+contexts = [
+    { context_pattern = "arn:aws:eks:sa-east-1:1111111111:cluster/cluster-dev", context_alias = "cluster-dev" },
+]
 
 [aws]
 force_display = true
 format = '[AWS $symbol($profile )(\($region\))(\[$duration\])]($style) | '
-
-[kubernetes.context_aliases]
-'arn:aws:eks:us-east-1:013017773068:cluster/libre-dev' = 'libre-dev'
-'arn:aws:eks:us-east-1:517291365838:cluster/libre-prod' = 'libre-prod'
-'admin@nethermind-nonprod-validators-cluster' = "scaleway-nonprod"
 
 [gcloud]
 disabled = true
