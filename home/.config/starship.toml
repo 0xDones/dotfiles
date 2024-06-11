@@ -12,6 +12,7 @@ $git_status\
 $character
 """
 add_newline = true
+command_timeout = 2000
 
 [directory]
 read_only = " 󰌾"
@@ -23,21 +24,21 @@ repo_root_style = "green bold"
 style = "cyan bold"
 
 [kubernetes]
-format = '[k8s ⛵ $context](#2962ff bold) | '
 disabled = false
+format = '[$symbol $context]($style) | '
+symbol = "⛵"
+style = "green bold"
 detect_files = ['Chart.yaml', 'config.yaml']
 detect_extensions = ['yaml', 'yml']
 contexts = [
-    { context_pattern = "arn:aws:eks:sa-east-1:1111111111:cluster/cluster-dev", context_alias = "cluster-dev" },
+    { context_pattern = "arn:aws:eks:sa-east-1:111111111111:cluster/cluster-dev", context_alias = "cluster-dev" },
+    { context_pattern = "arn:aws:eks:sa-east-1:111111111111:cluster/cluster-prod", context_alias = "cluster-prod", style = 'red bold' },
 ]
 
 [aws]
 force_display = true
-format = '[AWS $symbol($profile )(\($region\))(\[$duration\])]($style) | '
-
-[gcloud]
-disabled = true
-format = '[GCP $symbol($project)]($style) | '
+format = '[$symbol($profile )(\($region\))(\[$duration\])]($style) | '
+symbol = "🅰 "
 
 [line_break]
 disabled = false
