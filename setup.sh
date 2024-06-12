@@ -54,7 +54,8 @@ install_oh_my_zsh_plugins(){
 
 install_brew_packages(){
   echo_info "Installing brew packages..."
-  brew install starship \
+  brew install \
+  starship \
   wget \
   fnm \
   fzf \
@@ -72,7 +73,6 @@ install_brew_packages(){
   mcfly \
   make \
   watch \
-  # dnsmasq \
   helm \
   colordiff \
   bash \
