@@ -77,7 +77,10 @@ install_brew_packages(){
   colordiff \
   bash \
   ruby \
-  tmux
+  tmux \
+  terraform-docs \
+  tflint \
+  commitizen
   echo_success "Done!"
 }
 
