@@ -137,6 +137,18 @@ alias ts="terraspace"
 alias tsp="terraspace plan"
 alias tsup="terraspace up"
 
+# Python3 + Pip Setup
+alias pip='pip3'
+alias python='python3'
+export PIP_DIR=$(python -m site --user-base)
+export PATH="${PIP_DIR}/bin:$PATH"
+
+# Startup script
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+  
 eval "$(starship init zsh)"
 eval "$(mcfly init zsh)"
 eval "$(fnm env --use-on-cd)"
