@@ -80,7 +80,9 @@ install_brew_packages(){
   tmux \
   terraform-docs \
   tflint \
-  commitizen
+  commitizen \
+  git-delta \
+  ripgrep
   echo_success "Done!"
 }
 
